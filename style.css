@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+:root {
+    --lead: #212121;
+    --gold: #F2BD12;
+    --eye-ball: #FFFDF7;
+    --hint-yellow: #FCF1CC;
+    --pure-white: #fff;
+}
+
+body {
+    background: var(--eye-ball);
+}
+
+/* BASIC STYLING */
+a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--lead);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.wrapper {
+    max-width: 1200px;
+    /* Changed from min-width to max-width */
+    width: 100%;
+    /* Allow it to shrink on small screens */
+    margin: auto;
+    padding-inline: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* HEADER STYLING */
+.navbar {
+    min-height: 14vh;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    background: var(--gold);
+    color: var(--pure-white);
+    font-size: 1.1rem;
+    box-shadow: rgba(0, 0, 0, 0, 0.1) 0 2px 1px;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--lead);
+}
+
+.cart-icon {
+    position: relative;
+    color: var(--lead);
+    font-size: 1.3rem;
+}
+
+.cart-icon .cart-value {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    background: var(--gold);
+    color: var(--lead);
+    font-size: 0.85rem;
+    width: 20px;
+    text-align: center;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    line-height: 20px;
+}
+
+.desktop-action .hamburger {
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.p-top {
+    padding-top: 10rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+
+
+
+
+
+/* SECTION STYLING */
+
+.hero-section {
+    min-height: calc(100vh - 14vh);
+}
+
+.content,
+.img-container,
+.service-card {
+    flex: 1;
+    flex-basis: 300px;
+}
+
+.content h1 {
+    font-size: 5.6vw;
+    color: var(--lead);
+}
+
+.content h1 span {
+    color: var(--gold);
+}
+
+p {
+    font-size: 1.25rem;
+    color: gray;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+.para {
+    margin-block: 2rem;
+    max-width: 550px;
+}
+
+.social-icon {
+    background: var(--hint-yellow);
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 3rem;
+    box-shadow: rgba(0, 0, 0, 0, 0.1) 0 2px 1px;
+    transition: .3s ease-in-out;
+}
+
+.social-icon:hover {
+    background: var(--lead);
+    color: var(--pure-white);
+}
+
+/* OUR SERVICES */
+h5 {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.5rem;
+    color: var(--lead);
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--lead);
+    text-transform: capitalize;
+}
+
+.service-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 780px) {
+
+    /* Header */
+    .navlist,
+    .desktop-action .btn {
+        display: none;
+    }
+
+    .desktop-action .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: absolute;
+        top: 20%;
+        left: -100%;
+        transform: translateX(-50%);
+        width: 20rem;
+        padding: 2rem;
+        background: var(--pure-white);
+        border: 0.1rem solid var(--gold);
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px, rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+        transition: all 0.5s ease-in-out;
+        z-index: 999;
+        /* Ensure menu appears on top */
+    }
+
+    .mobile-menu.mobile-menu-active {
+        left: 50%;
+        /* Fixed from 100% */
+        transform: translateX(-50%);
+    }
+
+    /* Section Start */
+    .content h1 {
+        font-size: 3.6rem;
+    }
+
+    .content {
+        padding-top: 3rem;
+    }
+
+    .gap-2 {
+        gap: 1.4rem;
+    }
+
+    .gap-4 {
+        gap: 4rem;
+    }
+
+    /* Our Service Start*/
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Our Service End */
+}
