@@ -133,7 +133,9 @@ img {
     margin-top: 4rem;
 }
 
-
+.mt-half {
+    margin-top: .5rem;
+}
 
 
 
@@ -215,6 +217,82 @@ h3 {
 }
 
 
+/* OUR MENU start */
+.order-card {
+    flex: 1;
+    flex-basis: 300px;
+    padding: 0 1rem 2rem 1rem;
+    background: var(--pure-white);
+    border: 0.1rem solid var(--gold);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px, rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+}
+
+.order-card img {
+    filter: drop-shadow(block 0 10px 10px);
+    width: 15rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: var(--lead);
+}
+
+.order-card .price {
+    font-size: 1.7rem;
+    color: var(--gold);
+    padding: 1.3rem 0 1rem 0;
+}
+
+/* OUR MENU end */
+
+
+/* Our Review Start */
+
+
+
+/* swiper css start */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.review-container {
+    width: 650px;
+    max-width: 100%;
+    flex: 1;
+}
+
+.profile {
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fa-star {
+    color: var(--gold);
+}
+
+.arrow {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background: var(--gold);
+    color: var(--lead);
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+/* swiper css end */
+
+/* Our Review End */
 
 
 
