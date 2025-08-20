@@ -225,31 +225,74 @@ h3 {
 
 
 /* OUR MENU start */
+/* OUR MENU start */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 cards per row */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 992px) {
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards per row */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-list {
+        grid-template-columns: 1fr;
+        /* 1 card per row */
+    }
+}
+
 .order-card {
-    flex: 1;
-    flex-basis: 300px;
-    padding: 0 1rem 2rem 1rem;
-    background: var(--pure-white);
+    padding: 1rem;
+    background: var(--eye-ball);
     border: 0.1rem solid var(--gold);
     border-radius: 2rem;
+    text-align: center;
     box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px, rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
 }
 
 .order-card img {
-    filter: drop-shadow(block 0 10px 10px);
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
     width: 15rem;
+    max-width: 100%;
 }
 
 h4 {
     font-size: 1.8rem;
     color: var(--lead);
+    margin: 1rem 0;
 }
 
 .order-card .price {
     font-size: 1.7rem;
     color: var(--gold);
-    padding: 1.3rem 0 1rem 0;
+    padding: 1rem 0;
 }
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: var(--gold);
+    color: #fff;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--lead);
+    color: var(--pure-white);
+}
+
+
 
 /* Cart tab Styling Start */
 .cart-tab {
@@ -264,6 +307,7 @@ h4 {
     align-items: center;
     z-index: 99;
     box-shadow: rgba(0, 0, 0, 0.1) -10px -10px 25px;
+    transition: .3s ease-in-out;
 }
 
 .cart-tab-active {
@@ -302,8 +346,8 @@ h4 {
 }
 
 .cart-btn .btn:hover {
-    background: var(--gold);
-    color: var(--lead);
+    background: var(--lead);
+    color: var(--pure-white);
 }
 
 .item {
@@ -311,6 +355,10 @@ h4 {
     align-items: center;
     padding: .7rem 1rem;
     gap: 1rem;
+}
+
+.item .detail {
+    flex: 2;
 }
 
 .cart-list .item::nth-child(even) {
@@ -520,8 +568,8 @@ input[type="email"] {
         /* Ensure menu appears on top */
     }
 
-    .mobile-menu.mobile-menu-active {
-        left: 50%;
+    .mobile-menu .mobile-menu-active {
+        /* left: 50%; */
         /* Fixed from 100% */
         transform: translateX(-50%);
     }
